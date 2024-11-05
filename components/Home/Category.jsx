@@ -9,7 +9,7 @@ export default function Category({category}) {
   
 
   const [categoryList, setCategoryList]=useState([]);
-  const [selectedCategory, setSelectedCategory]=useState('Dogs');
+  const [selectedCategory, setSelectedCategory]=useState('Cachorros');
 
   useEffect(()=>{
     GetCategories();
@@ -29,7 +29,7 @@ export default function Category({category}) {
       <Text style={{
         fontFamily: 'outfit-medium',
         fontSize: 20,
-      }}>Category</Text>
+      }}>Categorias</Text>
 
       <FlatList
         data={categoryList}

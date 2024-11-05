@@ -14,7 +14,7 @@ export default function PetListByCategory() {
 
   const [loader,setLoader]=useState(false);
   useEffect(()=>{
-    GetPetList('Dogs')
+    GetPetList('Cachorros')
   }, [])
   /**
    * 
@@ -41,7 +41,7 @@ export default function PetListByCategory() {
         style={{marginTop:10}}
         horizontal={true}
         refreshing={loader}
-        onRefresh={()=>GetPetList('Dogs')}
+        onRefresh={()=>GetPetList('Cachorros')}
         renderItem={({item, index})=>(
         <PetListItem pet={item}/>
 

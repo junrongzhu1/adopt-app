@@ -1,16 +1,34 @@
-import { View, Text, FlatList, Image, StyleSheet } from 'react-native';
+import { View, Text, FlatList, Image, StyleSheet, Touchable, TouchableOpacity } from 'react-native';
 import React from 'react'
 import Colors from './../../constants/Colors'
+import { useRouter } from 'expo-router';
+import MarkFav from './../MarkFav';
 
 
 export default function PetListItem({pet}) {
+
+  const router = useRouter();
   return (
-    <View style={{
+    <TouchableOpacity 
+    onPress={()=>router.push({
+      pathname:'/pet-details',
+      params:pet
+    })}
+    style={{
       padding: 10,
       marginRight: 15,
       backgroundColor: Colors.WHITE,
       borderRadius: 10
     }}>
+
+      <View style={{
+        position: 'absolute',
+        zIndex: 10,
+        right: 10,
+        top: 10
+      }}>
+        <MarkFav pet={pet} color={'white'}/>
+      </View>
       <Image source={{ uri: pet?.imageUrl }}
         style={{
           width: 155,
@@ -42,6 +60,6 @@ export default function PetListItem({pet}) {
           backgroundColor: Colors.LIGHT_PRIMARY,
         }}>{pet.age} Anos</Text>
       </View>
-    </View>
+    </TouchableOpacity>
   )
 }

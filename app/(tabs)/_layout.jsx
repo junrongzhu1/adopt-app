@@ -14,14 +14,14 @@ export default function TabLayout() {
     >
       <Tabs.Screen name='home'
         options={{
-          title: 'Home',
+          title: 'Inicio',
           headerShown: false,
           tabBarIcon:({color}) => <Ionicons name="home" size={24} color={color} />
         }}
         />
       <Tabs.Screen name='favorite'
         options={{
-          title: 'Favorite',
+          title: 'Favoritos',
           headerShown: false,
           tabBarIcon:({color}) => <Ionicons name="heart" size={24} color={color} />
         }}
@@ -35,7 +35,7 @@ export default function TabLayout() {
       />
       <Tabs.Screen name='profile'
           options={{
-            title: 'Profile',
+            title: 'Perfil',
             headerShown: false,
             tabBarIcon:({color}) => <Ionicons name="people-circle" size={24} color={color} />
           }}
