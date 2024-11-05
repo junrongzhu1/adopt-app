@@ -29,7 +29,7 @@ export default function LoginScreen() {
         redirectUrl: Linking.createURL('/(tabs)/home)', { scheme: 'myapp' }),
       })
 
-      if (signUp) {
+      if (signIn) {
       } else {
         // Use signIn or signUp for next steps such as MFA
       }
